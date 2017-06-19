@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Easy Vreco</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Fontawesome -->
+	<script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Kaushan+Script|Montserrat:400,700" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Estilos -->
+	<link rel="stylesheet" href="asset/css/main.css">
+</head>
+<body>
+	<section class="conainer">
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<button id="encuentrame">Encuéntrame</button>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="form-group">
+				  <label for="origen">Origen:</label>
+				  <input type="text" class="form-control" id="origen">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<div class="form-group">
+				  <label for="destino">Destino:</label>
+				  <input type="text" class="form-control" id="destino">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3">
+				<button id="ruta">Ruta</button>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-sm-12" id="map">
+				<!-- Aquí va el mapita -->
+			</div>
+		</div>
+	</section>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="asset/js/main.js"></script>
+	
+	<!-- APi Google maps -->
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb0O0aVPdw44fJNu-pQJVB5h7w83kbIcA&callback=initMap">
+    </script>
+</body>
+</html>
