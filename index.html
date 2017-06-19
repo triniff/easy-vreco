@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Easy Vreco</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <!-- Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,12 +17,16 @@
         <button id="encuentrame">Encuéntrame</button>
       </div>
       <div class="col-md-3 col-sm-3">
-        <input id="origen" class="controls" type="text"
+        <div class="form-group">
+           <input id="origen" class="form-control" type="text"
         placeholder="Ingresa tu origen de tu ruta">      
+        </div>
       </div>
       <div class="col-md-3 col-sm-3">
-        <input id="destino" class="controls" type="text"
-        placeholder="Ingresa tu destino de tu ruta">
+        <div class="form-group">
+          <input id="destino" class="form-control" type="text"
+          placeholder="Ingresa tu destino de tu ruta">
+        </div>
       </div>
       <div class="col-md-3 col-sm-3">
         <button id="ruta">Ruta</button>
@@ -45,7 +49,9 @@
   <script src="asset/js/main.js"></script>
   <!-- APi Google maps -->
     <script type="text/javascript" src="asset/js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClwzibvDvM7w-J8P6_szVXboqEe6oZtW4&libraries=places&callback=initMap"
-        async defer></script>
+
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClwzibvDvM7w-J8P6_szVXboqEe6oZtW4&libraries=places&callback=initMap">
+    </script>
   </body>
 </html>

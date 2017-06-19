@@ -53,7 +53,7 @@
         autocomplete.addListener('place_changed', function() {
           var place = autocomplete.getPlace();
           if (!place.place_id) {
-            window.alert("Please select an option from the dropdown list.");
+            window.alert("Seleccione una opción de la lista ");
             return;
           }
           if (mode === 'ORIG') {
@@ -78,9 +78,11 @@
           travelMode: this.travelMode
         }, function(response, status) {
           if (status === 'OK') {
-            me.directionsDisplay.setDirections(response);
+            document.getElementById("ruta", me.directionsDisplay.setDirections(response) );
           } else {
-            window.alert('Directions request failed due to ' + status);
+            window.alert('Se ha producido un error en la solicitud de ' + status);
           }
         });
-      };
+    
+};
+
