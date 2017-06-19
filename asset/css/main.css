@@ -5,8 +5,11 @@
 
 #map{
 	width: 100%;
+	margin: 0;
+	padding: 0;
 	height: 100vh;
 	border: 2px solid black;
+	box-sizing: border-box;
 }
 
 button{
