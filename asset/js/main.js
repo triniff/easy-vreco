@@ -101,11 +101,18 @@ AutocompleteDirectionsHandler.prototype.route = function() {
   travelMode: this.travelMode
   }, function(response, status) {
       if (status === 'OK') {
-        document.getElementById("ruta", me.directionsDisplay.setDirections(response) );
+        document.getElementById("ruta").addEventListener("click", function(){
+          if (document.getElementById('origen').value == "") {
+            alert("Debes ingresar una ruta")
+          }else{
+             me.directionsDisplay.setDirections(response);
+            document.getElementById("origen").value = "";
+            document.getElementById("destino").value = "";
+          }
+        })
       } else {
          window.alert('Se ha producido un error en la solicitud de ' + status);
       }
     });
-    
 };
 
