@@ -42,11 +42,10 @@ function AutocompleteDirectionsHandler(map) {
   this.travelMode = 'WALKING';
   var originInput = document.getElementById('origen');
   var destinationInput = document.getElementById('destino');
-  var modeSelector = document.getElementById('mode-selector');
   this.directionsService = new google.maps.DirectionsService;
   this.directionsDisplay = new google.maps.DirectionsRenderer;
   this.directionsDisplay.setMap(map);
-
+  
   var originAutocomplete = new google.maps.places.Autocomplete(
     originInput, {placeIdOnly: true});
   var destinationAutocomplete = new google.maps.places.Autocomplete(
@@ -55,11 +54,7 @@ function AutocompleteDirectionsHandler(map) {
   this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
   this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
 
-  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
-  this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
 }
-
 
 AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
   var radioButton = document.getElementById(id);
@@ -115,4 +110,12 @@ AutocompleteDirectionsHandler.prototype.route = function() {
       }
     });
 };
-
+var ruta = document.getElementById("ruta");
+    ruta.addEventListener("click", function(){
+      if (document.getElementById('origen').value == "") {
+            alert("Debes ingresar una ruta")
+      }
+      else{
+        AutocompleteDirectionsHandler.prototype.route()
+      }
+    })
